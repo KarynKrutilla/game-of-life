@@ -23,13 +23,9 @@ def checkNumNeighbors():
 
 # Check rules above and change isAlive status accordingly
 def updateStatus(int numNeighbors):
-	if isAlive:
-		if numNeighbors < 2:
-			isAlive = false
-		elif numNeighbors > 3:
-			isAlive = false
-	else:
-		if numNeighbors == 3:
+	if isAlive && (numNeighbors < 2 || numNeighbors > 3):
+		isAlive = false
+	elif !isAlive && numNeighbors == 3:
 			isAlive = true
 
 # Check current status of this cell
