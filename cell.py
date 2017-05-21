@@ -32,6 +32,10 @@ def updateStatus(int numNeighbors):
 def isAlive():
 	return isAlive
 
+# Updates the status of this cell
+def setAlive(alive):
+	isALive = alive
+
 # On each 'tick', a cell will update its status based on the rules
 def tick():
 	updateStatus(checkNumNeighbors())
